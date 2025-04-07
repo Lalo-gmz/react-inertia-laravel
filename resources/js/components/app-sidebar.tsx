@@ -7,6 +7,7 @@ import {
     BookHeart,
     BookImage,
     LayoutDashboard,
+    StoreIcon,
 } from 'lucide-react';
 import * as React from 'react';
 
@@ -67,7 +68,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             url: '/dashboard',
             icon: LayoutDashboard,
         },
-        // Agrega "Mis Puntos" solo si el rol es "user"
+        {
+            title: 'Tiendas',
+            url: route('store.show'),
+            icon: StoreIcon,
+        },
+        // Agrega "Mis Puntos" solo si el rol es "user" {route('security.show')}
         ...(isUser
             ? [{
                   title: 'Mis Puntos',

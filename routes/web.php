@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Account\ProfileController;
 use App\Http\Controllers\Account\SecurityController;
+use App\Http\Controllers\StoreController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -33,6 +34,10 @@ Route::middleware('auth', 'verified', 'role:admin|user')->group(function () {
 
     // Security
     Route::get('/account/security', [SecurityController::class, 'show'])->name('security.show');
+
+    // Store
+    Route::get('/stores', [StoreController::class, 'show'])->name('store.show');
+
 });
 
 require __DIR__.'/auth.php';

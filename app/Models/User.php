@@ -89,4 +89,8 @@ class User extends Authenticatable implements MustVerifyEmail
             ? asset('storage/'.$this->profile_photo_path)
             : '';
     }
+
+    public function store() {
+        return $this->belongsTo(Store::class);
+    }
 }
