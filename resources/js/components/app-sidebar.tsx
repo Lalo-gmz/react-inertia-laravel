@@ -27,15 +27,8 @@ const data = {
     projects: [
         {
             logo: Atom,
-            title: 'Starter',
-            subtitle: 'React - Inertia - Laravel',
-        },
-    ],
-    navMain: [
-        {
-            title: 'Dashboard',
-            url: '/dashboard',
-            icon: LayoutDashboard,
+            title: 'Bonanza',
+            subtitle: 'Compra, Acumula, Gana',
         },
     ],
     navSecondary: [
@@ -66,13 +59,32 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     const { auth } = usePage<PageProps>().props;
     const user = auth.user;
 
+    const isUser = user?.roles?.includes('user');
+
+    const navMain = [
+        {
+            title: 'Dashboard',
+            url: '/dashboard',
+            icon: LayoutDashboard,
+        },
+        // Agrega "Mis Puntos" solo si el rol es "user"
+        ...(isUser
+            ? [{
+                  title: 'Mis Puntos',
+                  url: '/points',
+                  icon: BookHeart,
+              }]
+            : [])
+    ];
+
+
     return (
         <Sidebar variant="inset" collapsible="icon" {...props}>
             <SidebarHeader>
                 <ProjectSwitcher projects={data.projects} />
             </SidebarHeader>
             <SidebarContent>
-                <NavMain items={data.navMain} />
+                <NavMain items={navMain} />
                 <NavSecondary items={data.navSecondary} className="mt-auto" />
             </SidebarContent>
             <SidebarFooter>

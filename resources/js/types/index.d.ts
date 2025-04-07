@@ -7,6 +7,7 @@ export interface User {
     email_verified_at?: string;
     profile_photo_url: string | undefined;
     two_factor_confirmed_at: string | null;
+    roles: string[];
 }
 
 export type PageProps<

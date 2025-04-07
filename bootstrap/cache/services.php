@@ -37,9 +37,10 @@
     33 => 'Termwind\\Laravel\\TermwindServiceProvider',
     34 => 'Pest\\Laravel\\PestServiceProvider',
     35 => 'Mailtrap\\Bridge\\Laravel\\MailtrapApiProvider',
-    36 => 'Tighten\\Ziggy\\ZiggyServiceProvider',
-    37 => 'App\\Providers\\AppServiceProvider',
-    38 => 'App\\Providers\\FortifyServiceProvider',
+    36 => 'Spatie\\Permission\\PermissionServiceProvider',
+    37 => 'Tighten\\Ziggy\\ZiggyServiceProvider',
+    38 => 'App\\Providers\\AppServiceProvider',
+    39 => 'App\\Providers\\FortifyServiceProvider',
   ),
   'eager' => 
   array (
@@ -63,9 +64,10 @@
     17 => 'Termwind\\Laravel\\TermwindServiceProvider',
     18 => 'Pest\\Laravel\\PestServiceProvider',
     19 => 'Mailtrap\\Bridge\\Laravel\\MailtrapApiProvider',
-    20 => 'Tighten\\Ziggy\\ZiggyServiceProvider',
-    21 => 'App\\Providers\\AppServiceProvider',
-    22 => 'App\\Providers\\FortifyServiceProvider',
+    20 => 'Spatie\\Permission\\PermissionServiceProvider',
+    21 => 'Tighten\\Ziggy\\ZiggyServiceProvider',
+    22 => 'App\\Providers\\AppServiceProvider',
+    23 => 'App\\Providers\\FortifyServiceProvider',
   ),
   'deferred' => 
   array (

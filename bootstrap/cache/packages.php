@@ -94,6 +94,13 @@
       0 => 'Mailtrap\\Bridge\\Laravel\\MailtrapApiProvider',
     ),
   ),
+  'spatie/laravel-permission' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Permission\\PermissionServiceProvider',
+    ),
+  ),
   'tightenco/ziggy' => 
   array (
     'providers' => 

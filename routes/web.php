@@ -15,11 +15,16 @@ Route::get('/', function () {
     ]);
 });
 
-Route::middleware('auth', 'verified')->group(function () {
+Route::middleware('auth', 'verified', 'role:admin|user')->group(function () {
     // Dashboard
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    // Points
+    Route::get('/points', function () {
+        return Inertia::render('Points');
+    })->name('Points');
 
     // Profile
     Route::get('/account/profile', [ProfileController::class, 'show'])->name('profile.show');
