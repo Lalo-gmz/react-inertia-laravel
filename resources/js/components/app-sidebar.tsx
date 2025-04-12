@@ -70,7 +70,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         },
         {
             title: 'Tiendas',
-            url: route('store.show'),
+            url: route('store.index'),
             icon: StoreIcon,
         },
         // Agrega "Mis Puntos" solo si el rol es "user" {route('security.show')}

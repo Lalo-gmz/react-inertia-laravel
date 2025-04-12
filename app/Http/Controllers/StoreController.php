@@ -18,8 +18,8 @@ class StoreController extends Controller
         // $stores = Store::with('config')->get();
         $stores = Store::get();
 
-        return Inertia::render('Store/Show', [
-            'stores' => $stores,
+        return Inertia::render('Store/Index', [
+            'tiendas' => $stores,
         ]);
     }
 

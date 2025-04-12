@@ -36,7 +36,8 @@ Route::middleware('auth', 'verified', 'role:admin|user')->group(function () {
     Route::get('/account/security', [SecurityController::class, 'show'])->name('security.show');
 
     // Store
-    Route::get('/stores', [StoreController::class, 'show'])->name('store.show');
+    Route::get('/stores', [StoreController::class, 'index'])->name('store.index');
+    Route::get('/stores/{id}', [StoreController::class, 'show'])->name('store.show');
 
 });
 
